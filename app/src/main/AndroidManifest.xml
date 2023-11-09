@@ -18,10 +18,10 @@
             android:name=".GPSMapas"
             android:exported="false" />
         <activity
-            android:name=".MainActivityInicio"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivityInicio"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

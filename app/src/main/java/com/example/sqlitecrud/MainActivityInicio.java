@@ -23,7 +23,7 @@ public class MainActivityInicio extends AppCompatActivity {
         startActivity(gpsMapasClinica);
     }
     public void CrearPacienteClinic (View view) {
-        Intent crearPaciente = new Intent (this, Contacto.class);
+        Intent crearPaciente = new Intent (this, MainActivity.class);
         startActivity(crearPaciente);
     }
 }
