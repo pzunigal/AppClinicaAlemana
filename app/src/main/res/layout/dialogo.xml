@@ -5,68 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/et_nombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="148dp"
-        android:hint="Nombre"
-        android:textSize="24sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="16dp" />
-
-    <EditText
-        android:id="@+id/et_apellido"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Apellido"
-        android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@+id/et_nombre"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <EditText
-        android:id="@+id/et_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email"
-        android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@+id/et_apellido"
-        tools:layout_editor_absoluteX="27dp" />
-
-    <EditText
-        android:id="@+id/et_telefono"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Telefono"
-        android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@+id/et_email"
-        tools:layout_editor_absoluteX="27dp" />
-
-    <EditText
-        android:id="@+id/et_ciudad"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ciudad"
-        android:textSize="24sp"
-
-        app:layout_constraintTop_toBottomOf="@+id/et_telefono"
-        tools:layout_editor_absoluteX="29dp" />
-
     <LinearLayout
-        android:layout_width="408dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="393dp"
+        android:layout_height="110dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_ciudad">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <Button
             android:id="@+id/btn_agregar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="#00A8A0"
+            android:onClick="guardar"
             android:text="agregar" />
 
         <Button
@@ -74,6 +28,63 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="#00A8A0"
+            android:onClick="cancelar"
             android:text="cancelar" />
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="384dp"
+        android:layout_height="426dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView4">
+
+        <EditText
+            android:id="@+id/et_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="148dp"
+            android:hint="Ingrese nombre del paciente"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/et_apellido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese apellido del paciente"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/et_ciudad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese Ciudad del paciente"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/et_telefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese Telefono/Celular"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese correo del paciente"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="391dp"
+        android:layout_height="137dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/clinicaalemana" />
 </androidx.constraintlayout.widget.ConstraintLayout>
